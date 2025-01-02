@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+
 const Home = () => {
   return (
+    <>
     <div className="container mt-5">
       <h1>Welcome to Vydehi</h1>
       <p>This is the home page of the Vydehi application.</p>
@@ -12,6 +14,7 @@ const Home = () => {
         <p className="read-the-docs">Click the logo to see the animation!</p>
       </div>
     </div>
+    </>
   );
 };
 
