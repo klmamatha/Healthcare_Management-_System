@@ -8,25 +8,21 @@ const Header = () => {
       
     <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
              <div className="container">    
-                <a to="/" className="navbar-brand text-info">
+                <a to="/" className="navbar-brand text-info fs-1 me-5">
                 <i className="fa fa-suitcase fa-lg " aria-hidden="true"></i> Vydehi
                 </a>
-                <button
-                className="navbar-toggler me-5"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mynavbar"
-                aria-controls="mynavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                >
+                <button className="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="mynavbar">
                 <div className="d-flex">
-                    <button
-                        className="btn  me-4 ms-5  text-light "
-                        style={{
+                    <button className="btn  me-4 ms-5  text-light " 
+                    style={{ padding: '5px 10px',    marginRight: '20px', backgroundColor: '#00aaa1',    border: '2px solid #00aaa1', borderRadius: '10px',   animation: 'blinker 2s linear infinite', cursor: 'pointer', }}
+                        type="button" >PET/CT Scan
+                    </button>
+
+                    <button className="btn text-light me-4" 
+                    style={{
                             padding: '5px 10px',
                             marginRight: '20px',
                             backgroundColor: '#00aaa1',
@@ -35,15 +31,20 @@ const Header = () => {
                             animation: 'blinker 2s linear infinite',
                             cursor: 'pointer',
                         }}
-                        type="button"
-                        >
-                        PET/CT Scan
-                    </button>
-
-                    <button className="btn btn-outline-secondary me-4" type="button">
+                    type="button">
                     Health Check
                     </button>
-                    <button className="btn btn-outline-secondary me-4" type="button">
+                    <button className="btn text-light me-4"
+                    style={{
+                            padding: '5px 10px',
+                            marginRight: '20px',
+                            backgroundColor: 'brown',
+                            border: '2px solidrgb(71, 23, 23)',
+                            borderRadius: '10px',
+                            animation: 'blinker 2s linear infinite',
+                            cursor: 'pointer',
+                        }}
+                     type="button">
                     Emergency Medicine
                     </button>
                     <button className="btn btn-outline-secondary me-4" type="button">
