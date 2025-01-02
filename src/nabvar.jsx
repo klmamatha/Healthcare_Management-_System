@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-sm navbar-light sticky-top bg-green-500">
+        <nav className="navbar navbar-expand-sm sticky-top bg-green-500 !important">
             <div className="container">
 
                 {/* Collapsible Navbar */}
