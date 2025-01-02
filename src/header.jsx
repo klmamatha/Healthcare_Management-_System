@@ -7,11 +7,11 @@ import logo from './assets/images/logo.png';
 
 const Header = () => {
     return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+        <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
             <div className="container">
                 {/* Logo */}
                 <Link to="/" className="navbar-brand text-info fs-1 fw-bold d-flex align-items-center">
-                    <img src={logo} className="img-fluid w-10 h-8" alt="Logo" />
+                    <img src={logo} className="img-fluid w-10 h-8 me-2" alt="Logo" />
                     Vydehi
                 </Link>
 
@@ -90,7 +90,7 @@ const Header = () => {
                 </div>
             </div>
         </nav>
-  );
+    );
 };
 
 export default Header;
