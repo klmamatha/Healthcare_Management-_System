@@ -1,4 +1,3 @@
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,4 +40,43 @@
   50% {
     opacity: 0;
   }
+}
+.custom-img {
+  width: 100px;
+  height: 50px;
+  background-color: #233f5b; /* Light gray background */
+  border-radius: 50%; /* For a circular shape */
+}
+.custom-img1{
+  width: 32px;
+    height: 32px;
+    margin: 10px 4px -10px 10px;
+    border-radius: 10px;
+    background: red;
+}
+.bookapp{
+  border: 2px solid #0864B1;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 14px 15px 0;
+}
+.right-text-mhc1 {
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  background-color: #92382b;
+  color: white;
+  border: 2px solid #92382b;
+  border-radius: 10px;
+  animation: blinker 2s linear infinite;
+  cursor: pointer;
+}
+.right-text-mhc {
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  background-color: #00aaa1;
+  color: white;
+  border: 2px solid #00aaa1;
+  border-radius: 10px;
+  animation: blinker 2s linear infinite;
+  cursor: pointer;
 }

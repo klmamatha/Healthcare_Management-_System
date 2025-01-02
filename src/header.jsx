@@ -4,18 +4,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import logo from './assets/images/logo.png';
+import ambulance from './assets/images/ambulance.png'
 
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-            <div className="container">
-                {/* Logo */}
-                <Link to="/" className="navbar-brand text-info fs-1 fw-bold d-flex align-items-center">
-                    <img src={logo} className="img-fluid w-10 h-8 me-2" alt="Logo" />
-                    Vydehi
-                </Link>
+            <div className="container">  
+                <img src={logo} className='img-fluid custom-img ' alt="logo" />
 
-                {/* Mobile Toggle Button */}
+                <Link to="/" className="navbar-brand text-info fs-1 ms-3">
+                    Yadini
+                </Link>
                 <button
                     className="navbar-toggler me-5"
                     type="button"
@@ -31,9 +30,8 @@ const Header = () => {
                 {/* Collapsible Navbar */}
                 <div className="collapse navbar-collapse" id="mynavbar">
                     <div className="d-flex">
-                        {/* PET/CT Scan Button */}
                         <button
-                            className="btn text-light me-4 ms-5"
+                            className="btn text-light "
                             style={{
                                 padding: '5px 10px',
                                 marginRight: '20px',
@@ -48,44 +46,20 @@ const Header = () => {
                             PET/CT Scan
                         </button>
 
-                        {/* Health Check Button */}
-                        <button
-                            className="btn text-light me-4"
-                            style={{
-                                padding: '5px 10px',
-                                marginRight: '20px',
-                                backgroundColor: '#00aaa1',
-                                border: '2px solid #00aaa1',
-                                borderRadius: '10px',
-                                animation: 'blinker 2s linear infinite',
-                                cursor: 'pointer',
-                            }}
-                            type="button"
-                        >
+                        <button className="btn right-text-mhc " type="button">
                             Health Check
                         </button>
-
-                        {/* Emergency Medicine Button */}
-                        <button
-                            className="btn text-light me-4"
-                            style={{
-                                padding: '5px 10px',
-                                marginRight: '20px',
-                                backgroundColor: 'brown',
-                                border: '2px solid rgb(71, 23, 23)',
-                                borderRadius: '10px',
-                                animation: 'blinker 2s linear infinite',
-                                cursor: 'pointer',
-                            }}
-                            type="button"
-                        >
+                        <button className="btn right-text-mhc1" type="button">
                             Emergency Medicine
                         </button>
-
-                        {/* Video Consultation Button */}
-                        <button className="btn btn-outline-secondary me-4" type="button">
+                        <button className="btn btn-outline-secondary  bookapp" type="button">
                             Book Video Consultation
                         </button>
+                        <div>
+                            <img src={ambulance} className='img-fluid custom-img1' />
+                            <div> Emergency Number</div>
+
+                        </div>
                     </div>
                 </div>
             </div>
