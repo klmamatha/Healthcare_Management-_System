@@ -1,155 +1,116 @@
-import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 const Navbar = () => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
-
     return (
-        <nav className="bg-green-100 py-4">
-            <div className="container mx-auto flex justify-between items-center px-4">
-                {/* Logo */}
-                <div className="text-xl font-bold text-green-800">LOGO</div>
+        <nav className="navbar navbar-expand-sm navbar-light sticky-top bg-green-500">
+            <div className="container">
 
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 text-green-800">
-                    <li>
-                        <a href="/" className="hover:text-green-600">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about" className="hover:text-green-600">
-                            About Us
-                        </a>
-                    </li>
-                    <li className="relative">
-                        <button
-                            onClick={toggleDropdown}
-                            className="hover:text-green-600 focus:outline-none"
-                        >
-                            Services
+                {/* Collapsible Navbar */}
+                <div className="collapse navbar-collapse" id="mynavbar">
+                    <div className="d-flex">
+                        {/* PET/CT Scan Button */}
+                        <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+                            <li>
+                                <Link to="/" className="navbar-brand text-light fw-bold d-flex align-items-center">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="navbar-brand text-light fw-bold d-flex align-items-center">
+                                    About Us
+                                </Link>
+                            </li>
+                            {/* Specialties & Services Dropdown */}
+                            <li className="nav-item dropdown">
+                                <Link
+                                    to="#"
+                                    className="nav-link dropdown-toggle text-light fw-bold"
+                                    id="servicesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Specialties & Services
+                                </Link>
+                                <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li>
+                                        <Link to="/service1" className="dropdown-item">
+                                            Super Speciality   ▶
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/service2" className="dropdown-item">
+                                            Board Specialities   ▶
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/service3" className="dropdown-item">
+                                            Ayurveda
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/service4" className="dropdown-item">
+                                            Corporate Services
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/service5" className="dropdown-item">
+                                            Critical Services
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/service6" className="dropdown-item">
+                                            Robotic Surgery
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <Link to="/" className="navbar-brand text-light fw-bold d-flex align-items-center">
+                                    Career
+                                </Link>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <Link
+                                    to="#"
+                                    className="nav-link dropdown-toggle text-light fw-bold"
+                                    id="updatesDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Latest Updates
+                                </Link>
+                                <ul className="dropdown-menu" aria-labelledby="updatesDropdown">
+                                    <li>
+                                        <Link to="/update1" className="dropdown-item">
+                                            Update 1
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/update2" className="dropdown-item">
+                                            Update 2
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <Link to="/" className="navbar-brand text-light fw-bold d-flex align-items-center">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                        {/* Video Consultation Button */}
+                        <button className="btn btn-outline-secondary me-4" type="search">
+                            Video Consultation
                         </button>
-                        {isDropdownOpen && (
-                            <ul className="absolute bg-white shadow-md mt-2 py-2 w-40">
-                                <li>
-                                    <a
-                                        href="/service1"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/service2"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/service3"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 3
-                                    </a>
-                                </li>
-                            </ul>
-                        )}
-                    </li>
-                    <li>
-                        <a href="/career" className="hover:text-green-600">
-                            Career
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/contact" className="hover:text-green-600">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-
-                {/* Mobile Hamburger Menu */}
-                <div className="md:hidden">
-                    <button
-                        className="text-green-800 focus:outline-none"
-                        onClick={toggleMobileMenu}
-                    >
-                        ☰
-                    </button>
+                    </div>
                 </div>
             </div>
-
-            {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <ul className="md:hidden bg-green-100 px-4 py-2 space-y-2">
-                    <li>
-                        <a href="/" className="block hover:text-green-600">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about" className="block hover:text-green-600">
-                            About Us
-                        </a>
-                    </li>
-                    <li className="relative">
-                        <button
-                            onClick={toggleDropdown}
-                            className="block hover:text-green-600 focus:outline-none"
-                        >
-                            Services
-                        </button>
-                        {isDropdownOpen && (
-                            <ul className="bg-white shadow-md mt-2 py-2 w-full">
-                                <li>
-                                    <a
-                                        href="/service1"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/service2"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="/service3"
-                                        className="block px-4 py-2 hover:bg-green-100 hover:text-green-600"
-                                    >
-                                        Service 3
-                                    </a>
-                                </li>
-                            </ul>
-                        )}
-                    </li>
-                    <li>
-                        <a href="/career" className="block hover:text-green-600">
-                            Career
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/contact" className="block hover:text-green-600">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            )}
         </nav>
     );
 };
